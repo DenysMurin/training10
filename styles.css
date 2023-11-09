@@ -1,0 +1,57 @@
+*{
+    scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  font-weight: 800;
+  border-bottom: 2px solid red;
+}
+section:nth-child(odd) {
+  background: rebeccapurple;
+}
+section:nth-child(even) {
+  background: rgb(208, 255, 0);
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background: green;
+}
+nav a {
+  position: relative;
+  color: wheat;
+  text-decoration: none;
+  padding: 8px 25px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+/* длинные строки - посвечивание кнопок */
+nav a:hover,
+section#n1:hover ~ nav a[href="#n1"],
+section#n2:hover ~ nav a[href="#n2"],
+section#n3:hover ~ nav a[href="#n3"],
+section#n4:hover ~ nav a[href="#n4"],
+section#n5:hover ~ nav a[href="#n5"] {
+  color: brown;
+  background: yellow;
+}
+nav a:active{
+    background: blue;
+}
+/* отключенная полоса прокрутки */
+::-webkit-scrollbar{
+    display: none;
+}
